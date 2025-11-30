@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Photographic-style SVG: Shirakawa-go aerial view of thatched-roof village in valley -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Shirakawa-go aerial thatched-roof village">
+  <defs>
+    <linearGradient id="valleySky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8f7ff"/>
+      <stop offset="1" stop-color="#f6fbff"/>
+    </linearGradient>
+    <linearGradient id="fields" x1="0" x2="1">
+      <stop offset="0" stop-color="#bfe5a8"/>
+      <stop offset="1" stop-color="#8fb48a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#valleySky)"/>
+
+  <!-- valley and river -->
+  <path d="M0,600 C260,480 520,500 820,600 C1140,720 1320,640 1600,600 L1600,1000 L0,1000 Z" fill="#cfe6b8"/>
+  <path d="M340,700 C480,680 620,700 900,720 C1180,740 1320,700 1600,720 L1600,1000 L0,1000 Z" fill="#8fb3c6"/>
+
+  <!-- a few thatched houses -->
+  <g transform="translate(360,420)">
+    <path d="M0,200 L80,80 L160,200 Z" fill="#6b4425"/>
+    <rect x="24" y="200" width="112" height="64" fill="#e8d3bb"/>
+  </g>
+  <g transform="translate(560,460)">
+    <path d="M0,200 L100,60 L200,200 Z" fill="#6b4425"/>
+    <rect x="36" y="200" width="128" height="72" fill="#e8d3bb"/>
+  </g>
+
+  <text x="30" y="980" font-size="14" fill="#6b6b6b">generated: photographic-style vector • rasterize to JPEG for real photo file</text>
+</svg>

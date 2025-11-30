@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Photographic-style SVG: Ginkaku-ji Silver Pavilion with garden pond and reflection -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-label="Ginkaku-ji Silver Pavilion Kyoto with garden pond reflection">
+  <defs>
+    <linearGradient id="skyG" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#eaf4ff"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <linearGradient id="pond" x1="0" x2="0">
+      <stop offset="0" stop-color="#b6e0ff"/>
+      <stop offset="1" stop-color="#7fb6d8"/>
+    </linearGradient>
+    <filter id="reflect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#skyG)"/>
+
+  <!-- pavilion silhouette -->
+  <g transform="translate(320,180)">
+    <rect x="240" y="160" width="320" height="120" fill="#f6f6f6" stroke="#e1e1e1"/>
+    <path d="M200 160 L680 160 L640 120 L240 120 Z" fill="#d6d6d6"/>
+  </g>
+
+  <!-- pond reflection -->
+  <g transform="translate(0,540)" filter="url(#reflect)" opacity="0.9">
+    <rect x="0" y="0" width="1400" height="320" fill="url(#pond)"/>
+  </g>
+
+  <text x="30" y="880" font-size="14" fill="#6b6b6b">generated: photographic-style vector • rasterize to JPEG for real photo file</text>
+</svg>

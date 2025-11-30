@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Photographic-style SVG: Mount Fuji reflected in a lake with cherry blossoms in spring -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Mount Fuji reflected in a lake with cherry blossoms in spring">
+  <defs>
+    <linearGradient id="springSky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#dff2ff"/>
+      <stop offset="1" stop-color="#f6fbff"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" x2="0">
+      <stop offset="0" stop-color="#cfe6ff"/>
+      <stop offset="1" stop-color="#9fc8ff"/>
+    </linearGradient>
+    <filter id="waterBlur2">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#springSky)"/>
+
+  <!-- Mount Fuji silhouette -->
+  <g transform="translate(0,120)">
+    <path d="M0,700 L240,420 L420,560 L640,360 L920,560 L1180,420 L1600,700 L1600,1000 L0,1000 Z" fill="#2a3b54"/>
+  </g>
+
+  <!-- lake reflection -->
+  <g transform="translate(0,620)" filter="url(#waterBlur2)">
+    <rect x="0" y="0" width="1600" height="380" fill="url(#lake)"/>
+    <rect x="400" y="40" width="800" height="16" fill="#ffffff" opacity="0.06"/>
+  </g>
+
+  <!-- cherry blossoms in foreground -->
+  <g transform="translate(80,200)">
+    <circle cx="120" cy="120" r="20" fill="#ffd6ea"/>
+    <circle cx="180" cy="140" r="18" fill="#ffd6ea"/>
+    <circle cx="240" cy="100" r="22" fill="#ffd6ea"/>
+  </g>
+
+  <text x="30" y="980" font-size="14" fill="#6b6b6b">generated: photographic-style vector • rasterize to JPEG for real photo file</text>
+</svg>

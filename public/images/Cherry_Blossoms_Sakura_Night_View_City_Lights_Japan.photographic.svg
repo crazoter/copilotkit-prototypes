@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Photographic-style SVG: Cherry blossoms at night with city lights in the background -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-label="Cherry blossoms at night with city lights in Japan">
+  <defs>
+    <linearGradient id="nightBg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#08102b"/>
+      <stop offset="1" stop-color="#0c1b3a"/>
+    </linearGradient>
+    <filter id="bokehNight">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#nightBg)"/>
+
+  <!-- distant city lights -->
+  <g transform="translate(0,520)" opacity="0.9">
+    <rect x="80" y="120" width="120" height="280" fill="#07102a"/>
+    <rect x="240" y="140" width="80" height="260" fill="#07102a"/>
+    <rect x="360" y="100" width="200" height="300" fill="#07102a"/>
+    <g fill="#ffd97d" opacity="0.9">
+      <rect x="100" y="180" width="12" height="18" rx="2"/>
+      <rect x="260" y="200" width="16" height="20" rx="2"/>
+      <rect x="420" y="160" width="14" height="18" rx="2"/>
+    </g>
+  </g>
+
+  <!-- cherry blossom branch in foreground -->
+  <g transform="translate(900,220)" filter="url(#bokehNight)">
+    <path d="M0 200 C120 140 240 160 340 200" stroke="#3b2b22" stroke-width="12" fill="none"/>
+    <circle cx="40" cy="160" r="22" fill="#ffd6ea"/>
+    <circle cx="100" cy="170" r="20" fill="#ffd6ea"/>
+    <circle cx="160" cy="150" r="18" fill="#ffd0e6"/>
+  </g>
+
+  <text x="30" y="880" font-size="14" fill="#9aa8bf">generated: photographic-style vector • rasterize to JPEG for real photo file</text>
+</svg>

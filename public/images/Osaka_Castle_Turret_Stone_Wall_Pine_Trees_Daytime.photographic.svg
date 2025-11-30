@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Photographic-style SVG using gradients and soft filters to mimic a daytime photo look. 
+     Note: This is still vector artwork; to get a raster JPEG matching the repo's .jpg name,
+     you'll want to rasterize this SVG to a JPEG using an image tool (instructions below). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Photographic-style Osaka Castle daytime scene">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#cfefff"/>
+      <stop offset="0.6" stop-color="#eaf8ff"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff7d6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffeed4" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="hill" cx="50%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#9fd3a6"/>
+      <stop offset="1" stop-color="#6fb37a"/>
+    </radialGradient>
+    <linearGradient id="stoneGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#d7d7d7"/>
+      <stop offset="1" stop-color="#8e8e8e"/>
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#2d3e4f"/>
+      <stop offset="1" stop-color="#1b2936"/>
+    </linearGradient>
+
+    <filter id="photoBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feBlend in="SourceGraphic" in2="b" mode="normal"/>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="g"/>
+      <feMerge>
+        <feMergeNode in="g"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="30" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- sky and subtle sun -->
+  <rect width="100%" height="100%" fill="url(#skyGrad)"/>
+  <circle cx="1300" cy="140" r="120" fill="url(#sunGlow)" opacity="0.9"/>
+
+  <!-- distant soft hills -->
+  <g opacity="0.95">
+    <path d="M0,560 C260,440 520,420 820,540 C1140,660 1300,600 1600,560 L1600,1000 L0,1000 Z" fill="url(#hill)"/>
+  </g>
+
+  <!-- stone wall with textured pattern -->
+  <g transform="translate(0,520)">
+    <rect x="80" y="40" width="1440" height="280" rx="10" fill="url(#stoneGrad)"/>
+    <!-- subtle noise-like pattern using transformed rectangles -->
+    <g opacity="0.06" fill="#000">
+      <rect x="120" y="72" width="140" height="48"/>
+      <rect x="280" y="72" width="160" height="48"/>
+      <rect x="460" y="72" width="120" height="48"/>
+      <rect x="620" y="72" width="180" height="48"/>
+      <rect x="820" y="72" width="140" height="48"/>
+      <rect x="990" y="72" width="160" height="48"/>
+      <rect x="1190" y="72" width="180" height="48"/>
+    </g>
+    <rect x="80" y="20" width="1440" height="10" fill="#ffffff" opacity="0.12"/>
+  </g>
+
+  <!-- pine trees cluster left -->
+  <g transform="translate(160,360)" filter="url(#softGlow)">
+    <g transform="translate(-20,0)">
+      <ellipse cx="0" cy="0" rx="90" ry="60" fill="#1f643f"/>
+      <ellipse cx="-30" cy="10" rx="70" ry="46" fill="#276a43"/>
+      <ellipse cx="40" cy="8" rx="68" ry="44" fill="#2b773e"/>
+      <rect x="-20" y="54" width="40" height="80" rx="8" fill="#714a2e"/>
+    </g>
+  </g>
+
+  <!-- pine trees cluster right -->
+  <g transform="translate(1360,380)" filter="url(#softGlow)">
+    <g>
+      <ellipse cx="0" cy="0" rx="100" ry="66" fill="#20633b"/>
+      <ellipse cx="-36" cy="12" rx="78" ry="50" fill="#256a3f"/>
+      <ellipse cx="36" cy="12" rx="76" ry="48" fill="#2a723f"/>
+      <rect x="-22" y="60" width="44" height="90" rx="10" fill="#6d3f23"/>
+    </g>
+  </g>
+
+  <!-- castle, more detailed shading -->
+  <g transform="translate(400,220)">
+    <!-- shadow behind castle -->
+    <ellipse cx="480" cy="420" rx="320" ry="40" fill="#000" opacity="0.15"/>
+
+    <!-- layered roofs with highlights -->
+    <g>
+      <path d="M160 160 L720 160 L640 100 L240 100 Z" fill="url(#roofGrad)" stroke="#0b1520" stroke-width="2"/>
+      <path d="M200 120 L680 120 L640 88 L240 88 Z" fill="#273643" opacity="0.98"/>
+      <rect x="320" y="56" width="240" height="64" rx="8" fill="#f9f9f9" stroke="#e9e9e9"/>
+      <g transform="translate(440,44)">
+        <circle cx="0" cy="0" r="12" fill="#f3d28a" stroke="#b88939"/>
+      </g>
+    </g>
+
+    <!-- base walls -->
+    <g>
+      <rect x="240" y="160" width="320" height="160" fill="#ffffff" stroke="#e6e6e6"/>
+      <rect x="280" y="200" width="64" height="36" rx="6" fill="#d7d7d7"/>
+      <rect x="456" y="200" width="64" height="36" rx="6" fill="#d7d7d7"/>
+    </g>
+  </g>
+
+  <!-- overall soft photo filter -->
+  <rect width="100%" height="100%" fill="transparent" filter="url(#photoBlur)"/>
+
+  <text x="30" y="980" font-size="14" fill="#6b6b6b">generated: photographic-style vector • rasterize to JPEG for real photo file</text>
+</svg>

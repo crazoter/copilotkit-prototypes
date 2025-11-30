@@ -1,0 +1,18 @@
+{
+  "python_version": "3.12",
+  "dockerfile_lines": [],
+  "dependencies": ["."],
+  "package_manager": "uv",
+  "graphs": {
+    "sample_weather_agent": "./sample_weather_agent.py:graph",
+    "backend_tool_rendering": "./backend_tool_rendering.py:graph",
+    "basic_chat": "./basic_chat.py:graph",
+    "human_in_the_loop": "./human_in_the_loop.py:graph",
+    "loading_tasks_sample": "./loading_tasks_sample.py:graph",
+    "haiku_gen": "./haiku_gen.py:graph",
+    "shared_state_recipe_maker": "./shared_state_recipe_maker.py:graph",
+    "predictive_state_md_editor": "./predictive_state_md_editor.py:graph",
+    "sub_graphs_example": "./sub_graphs_example.py:graph"
+  },
+  "env": ".env"
+}
