@@ -32,7 +32,7 @@ async def chat_node(state: AgentState, config: Optional[RunnableConfig] = None):
     """
 
     # 1. Define the model
-    model = ChatOpenAI(model="gpt-4o")
+    model = ChatOpenAI(model="gpt-5-mini")
 
     # Define config for the model
     if config is None:
