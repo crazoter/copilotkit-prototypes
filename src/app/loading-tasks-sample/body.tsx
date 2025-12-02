@@ -219,7 +219,7 @@ const Chat = () => {
           className="h-full rounded-2xl max-w-6xl mx-auto"
           labels={{
             initial:
-              "Hi, I'm an agent! I can help you with anything you need and will show you progress as I work. What can I do for you?",
+              "Hi, I'm an agent! I can help you with anything you need and will show you progress as I work. What can I do for you? (WARNING: THE DISPLAY IS NOT WORKING AT THE MOMENT)",
           }}
           suggestions={[
             {

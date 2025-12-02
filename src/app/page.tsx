@@ -41,7 +41,7 @@ const DEMO_CARDS: DemoCard[] = [
     id: "loading-tasks-sample",
     href: "/loading-tasks-sample",
     emoji: "⚙️",
-    title: "Loading Tasks",
+    title: "Loading Tasks (bugged)",
     description: "Task progress tracking with real-time step updates.",
     gradientFrom: "from-orange-600",
     gradientTo: "to-orange-900",
