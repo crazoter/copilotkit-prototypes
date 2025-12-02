@@ -272,7 +272,7 @@ export default function Home() {
             CopilotKit Demos
           </h1>
           <p className="text-xl text-gray-300">
-            Choose your demo experience
+            Demos obtained from the internet
           </p>
         </div>
 
